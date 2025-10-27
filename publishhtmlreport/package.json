@@ -1,0 +1,22 @@
+{
+  "name": "publishhtmlreport",
+  "version": "1.2.174",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^5.2.1",
+    "cheerio": "^1.0.0-rc.6",
+    "html_tab_report": "file:.."
+  },
+  "devDependencies": {
+    "@types/node": "^10.17.44",
+    "@types/q": "^1.5.4",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "publish-k6-report",
+  "version": "1.0.0",
+  "description": "Tarea para publicar reportes K6 HTML",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JonathanLopez",
+  "license": "MIT",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^3.1.0"
+  }
+}

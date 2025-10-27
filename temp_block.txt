@@ -1,0 +1,6 @@
+                    const config = VSS.getConfiguration();
+                    log('Configuración obtenida: ' + JSON.stringify(config, null, 2));
+                    
+                    // Notificar que estamos listos
+                    VSS.notifyLoadSucceeded();
+

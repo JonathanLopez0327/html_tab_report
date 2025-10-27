@@ -1,0 +1,22 @@
+.git/**
+.github/**
+**/*.map
+**/*.ts
+**/*.md
+**/*.markdown
+**/*.coffee
+**/*.bnf
+**/*.resjson
+**/*.yml
+**/*.cmd
+node_modules/**
+!node_modules/vss-web-extension-sdk/lib/**
+
+# Task runtime needs its own node_modules, keep all except the problematic symlink
+!publishhtmlreport/node_modules/**
+publishhtmlreport/node_modules/html_tab_report/**
+publishhtmlreport/node_modules/.package-lock.json
+
+# Misc
+npm-debug.log*
+**/.DS_Store

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+  "id": "a1b2c3d4-e5f6-7890-a1b2-c3d4e5f67890",
+  "name": "PublishK6Report",
+  "friendlyName": "Publish K6 HTML Report",
+  "description": "Publica el reporte HTML de K6 como artifact para visualizarlo en el tab personalizado",
+  "helpMarkDown": "Esta tarea publica el reporte HTML de K6 en el formato correcto para ser visualizado en el tab K6 Report.",
+  "category": "Utility",
+  "author": "JonathanLopez",
+  "version": {
+    "Major": 1,
+    "Minor": 0,
+    "Patch": 3
+  },
+  "instanceNameFormat": "Publish K6 Report",
+  "inputs": [
+    {
+      "name": "reportPath",
+      "type": "filePath",
+      "label": "Ruta del reporte HTML",
+      "defaultValue": "$(System.DefaultWorkingDirectory)/k6-results/summary.html",
+      "required": true,
+      "helpMarkDown": "Ruta completa al archivo HTML del reporte K6"
+    },
+    {
+      "name": "artifactName",
+      "type": "string",
+      "label": "Nombre del artifact",
+      "defaultValue": "k6-report",
+      "required": true,
+      "helpMarkDown": "Nombre del artifact que contendrá el reporte. IMPORTANTE: Debe ser 'k6-report' para que funcione con la extensión."
+    }
+  ],
+  "execution": {
+    "Node16": {
+      "target": "index.js"
+    },
+    "Node20": {
+      "target": "index.js"
+    }
+  }
+}

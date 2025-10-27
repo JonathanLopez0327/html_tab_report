@@ -1,0 +1,65 @@
+{
+  "manifestVersion": 1,
+  "id": "k6-report-viewer",
+  "name": "K6 Report Viewer",
+  "version": "1.9.0",
+  "publisher": "JonathanLopez",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "Visualiza reportes HTML de K6 desde los artifacts del pipeline",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "icons": {
+    "default": "images/logo.png"
+  },
+  "files": [
+    {
+      "path": "dist",
+      "addressable": true
+    },
+    {
+      "path": "images",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    },
+    {
+      "path": "tasks/PublishK6Report"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "published-html-tab",
+      "type": "ms.vss-build-web.build-results-tab",
+      "description": "Tab para visualizar HTML publicado por tareas (attachments)",
+      "targets": [
+        "ms.vss-build-web.build-results-view"
+      ],
+      "properties": {
+        "name": "Published HTML",
+        "uri": "dist/published-html.html",
+        "registeredObjectId": "published-html-tab"
+      }
+    },
+    {
+      "id": "publish-k6-report-task",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "tasks/PublishK6Report"
+      }
+    }
+  ],
+  "scopes": [
+    "vso.build_execute"
+  ]
+}
