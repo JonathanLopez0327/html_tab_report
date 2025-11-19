@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "k6-report-viewer",
   "name": "K6 Report Viewer",
-  "version": "1.9.0",
+  "version": "1.9.2",
   "publisher": "JonathanLopez",
   "targets": [
     {
@@ -13,6 +13,15 @@
   "categories": [
     "Azure Pipelines"
   ],
+  "content": {
+    "details": {
+      "path": "PIPELINE_SETUP.md"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/JonathanLopez0327/html_tab_report"
+  },
   "icons": {
     "default": "images/logo.png"
   },

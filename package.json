@@ -1,6 +1,6 @@
 {
   "name": "html_tab_report",
-  "version": "1.9.0",
+  "version": "1.9.2",
   "description": "Extensión de Azure DevOps para visualizar reportes K6",
   "scripts": {
     "build": "npm run copy-files && npm run build-task",
